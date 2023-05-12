@@ -16,7 +16,7 @@ Use CMU Sphinx to voice control raspberry pi to drive the mobile car to the desi
 
 研究步驟為:CMU Sphinx 安裝至樹梅派上進行語音辨識並控制我們所撰寫之 python 程式，輸出訊號至自走車馬達驅動板 L298N 上，使 DC 馬達驅動，控制自走車完成目的。
 A.將語音辨識的理論與實作兩者合一，利用研讀資料、擷取數據、實作程式等方式將樹梅派與自走車整合。需熟用 Linux 指令將 CMU Sphinx 系統安裝至樹梅派上，並自撰程式碼將樹梅派與 DC 直流引擎連動，過程均組員二人合作完成。
-![image](https://github.com/ChuHanLin0923/ChuHanLin/blob/main/1.jpg)
+![image](https://github.com/ChuHanLin0923/ChuHanLin/blob/main/1.png)
 B.Sphinx 的實現方法採用隱藏式馬可夫模型 (HMM)架構，建基於馬可夫鏈模型，其中規定指定狀態的機率取決於現行狀態而非其先前狀態。雖然馬可夫鏈模型對於可觀察的事件，例如文字輸入很有用，但隱藏式馬可夫模型可讓我們將隱藏事件，例如:詞類標註納入機率模型中。它們在語音辨識中用作序列模型，將標籤分配給序列中的每個單元，即字詞、音節、句子等。這些標籤會在其與所提供的輸入之間建立對映，以便它判斷最適當的標籤序列。
 
 C.開源軟件 Sphinx 辨識語音良率不佳

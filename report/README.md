@@ -16,14 +16,15 @@ Use CMU Sphinx to voice control raspberry pi to drive the mobile car to the desi
 
 研究步驟為:CMU Sphinx 安裝至樹梅派上進行語音辨識並控制我們所撰寫之 python 程式，輸出訊號至自走車馬達驅動板 L298N 上，使 DC 馬達驅動，控制自走車完成目的。
 A.將語音辨識的理論與實作兩者合一，利用研讀資料、擷取數據、實作程式等方式將樹梅派與自走車整合。需熟用 Linux 指令將 CMU Sphinx 系統安裝至樹梅派上，並自撰程式碼將樹梅派與 DC 直流引擎連動，過程均組員二人合作完成。
-
+![image](https://github.com/ChuHanLin0923/ChuHanLin/blob/main/1.jpg)
 B.Sphinx 的實現方法採用隱藏式馬可夫模型 (HMM)架構，建基於馬可夫鏈模型，其中規定指定狀態的機率取決於現行狀態而非其先前狀態。雖然馬可夫鏈模型對於可觀察的事件，例如文字輸入很有用，但隱藏式馬可夫模型可讓我們將隱藏事件，例如:詞類標註納入機率模型中。它們在語音辨識中用作序列模型，將標籤分配給序列中的每個單元，即字詞、音節、句子等。這些標籤會在其與所提供的輸入之間建立對映，以便它判斷最適當的標籤序列。
 
 C.開源軟件 Sphinx 辨識語音良率不佳
 解決途徑:利用 CMU 發行的線上開源程式 LMtool[註 1]自行建立一個語料庫，縮小語音辨識範圍。
-
+![image](https://github.com/ChuHanLin0923/ChuHanLin/blob/main/4.jpg)
 D. 樹梅派連接 L298n 驅動板後，可見左下圖為自走車系統的電路圖。Two_motor.py 將樹梅派指定腳位之電壓傳送到 L298n，其中 IN1、IN2 控制其中 1 顆 DC 馬達，IN3、IN4 控制另外一顆，晶片輸入與馬達狀態關係可見右下的圖表。
-
+![image](https://github.com/ChuHanLin0923/ChuHanLin/blob/main/2.jpg)
+![image](https://github.com/ChuHanLin0923/ChuHanLin/blob/main/3.jpg)
 ## 4.主要成果與評估
 
 我們專題的主要目的，在於學習現有的語音辨識理論與技巧，用 CMU Sphinx 系統為基礎，讓機器聽懂人說的話，完成自動語音辨認。經由實作經驗，結合所學到的知識，一步步學以致用。
